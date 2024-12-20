@@ -36,9 +36,15 @@
 				<version>3.1.0</version>
 				<executions>
 					<execution>
-						<id>MemoryHamsterGameApp</id>
+						<id>StreamsAndFilterExercise</id>
 						<configuration>
-							<mainClass>de.unistuttgart.iste.sqa.pse.sheet11.homework.MemoryHamsterGameApp</mainClass>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet11.presence.collectionstreams.StreamsAndFilterExercise</mainClass>
+						</configuration>
+					</execution>
+					<execution>
+						<id>WeAreAllPauleHereHamsterGameApp</id>
+						<configuration>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet11.presence.scopes.WeAreAllPauleHereHamsterGameApp</mainClass>
 						</configuration>
 					</execution>
 				</executions>

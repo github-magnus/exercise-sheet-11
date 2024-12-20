@@ -17,5 +17,8 @@ For the homework part you need to create your own classes and package (the namin
 
 ### Run the project via command line with Maven
   ```sh
-  mvn clean compile exec:java@$MemoryHamsterGameApp
+  mvn clean compile exec:java@StreamsAndFilterExercise
+  ```
+  ```sh
+  mvn clean compile exec:java@WeAreAllPauleHereHamsterGameApp
   ```
