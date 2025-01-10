@@ -8,7 +8,7 @@
 	<name>exercise-sheet-11</name>
 
 	<properties>
-		<hamster.version>5.0.1</hamster.version>
+		<hamster.version>5.0.2</hamster.version>
 	</properties>
 
 	<dependencies>
@@ -23,17 +23,17 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.11.0</version>
+				<version>3.13.0</version>
 				<configuration>
-					<release>17</release>
-					<source>17</source>
-					<target>17</target>
+					<release>21</release>
+					<source>21</source>
+					<target>21</target>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
-				<version>3.1.0</version>
+				<version>3.4.1</version>
 				<executions>
 					<execution>
 						<id>StreamsAndFilterExercise</id>
@@ -50,37 +50,13 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.3</version>
-				<configuration>
-					<forkMode>always</forkMode>
-					<environmentVariables>
-						<OUTPUT_INTERFACE>NONE</OUTPUT_INTERFACE>
-					</environmentVariables>
-					<argLine>-Dfile.encoding=UTF-8</argLine>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.3.0</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>test-jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
 				<groupId>com.diffplug.spotless</groupId>
 				<artifactId>spotless-maven-plugin</artifactId>
-				<version>2.40.0</version>
+				<version>2.43.0</version>
 				<configuration>
 					<java>
 						<palantirJavaFormat>
-							<version>2.38.0</version>
+							<version>2.50.0</version>
 						</palantirJavaFormat>
 						<indent>
 							<tabs>true</tabs>
@@ -98,32 +74,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<profiles>
-		<profile>
-			<id>noExerciseTests</id>
-			<activation>
-				<property>
-					<name>noExerciseTests</name>
-					<value>true</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<version>3.2.3</version>
-						<configuration>
-							<forkMode>always</forkMode>
-							<environmentVariables>
-								<OUTPUT_INTERFACE>NONE</OUTPUT_INTERFACE>
-							</environmentVariables>
-							<argLine>-Dfile.encoding=UTF-8</argLine>
-							<skipTests>true</skipTests>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 </project>
