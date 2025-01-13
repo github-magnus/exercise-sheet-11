@@ -11,6 +11,9 @@ The sheet has a presence and a homework part.
 
 ### Run the project via command line with Maven
   ```sh
+  mvn clean compile exec:java@SomethingWithCalendars
+  ```
+  ```sh
   mvn clean compile exec:java@StreamsAndFilterExercise
   ```
   ```sh
